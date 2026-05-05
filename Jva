@@ -1,0 +1,16 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('main-button');
+    const feedback = document.getElementById('feedback');
+
+    btn.addEventListener('click', () => {
+        // אפקט קטן של לחיצה
+        btn.style.transform = 'scale(0.95)';
+        setTimeout(() => btn.style.transform = 'translateY(-2px)', 100);
+
+        // הצגת הודעה
+        feedback.classList.remove('hidden');
+        feedback.innerText = "הקוד ב-GitHub מחובר ופועל! Bazinga! 🚀";
+        
+        console.log("Site is live and script is responding.");
+    });
+});
